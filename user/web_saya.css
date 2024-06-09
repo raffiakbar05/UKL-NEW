@@ -1,0 +1,556 @@
+:root {
+    --primary: #d27a3f;
+    --bg: #2e2d2c;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: "Popins", sans-serif;
+    background-color: var(--bg);
+    color: #f4f4f4;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-bottom: 1px solid #b16921;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+  }
+  
+  .navbar .navbar-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    font-style: italic;
+  }
+  
+  .navbar .navbar-logo span {
+    color: var(--primary);
+  }
+  
+  .navbar .navbar-nav a {
+    color: #fff;
+    display: inline-block;
+    font-size: 1.1rem;
+    margin: 0 1rem;
+  }
+  
+  .navbar .navbar-nav a:hover {
+    color: var(--primary);
+  }
+  
+  .navbar .navbar-nav a::after {
+    content: " ";
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--primary);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+  }
+  
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+  }
+  
+ 
+  
+  .navbar .navbar-extra a:hover {
+    color: var(--primary);
+  }
+  
+  
+
+  #drink-menu {
+    display: none;
+  }
+  
+  /* background home*/
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url("../img/header.bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-image: url('../user/img/motif.jpg');
+  }
+  
+  .hero::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    background: linear-gradient(
+      0deg,
+      rgba(1, 1, 3, 1) 8%,
+      #302c2c00 50%
+    );
+  }
+  
+  .hero .content {
+    padding: 1.4rem 7%;
+    max-width: 60rem;
+    
+  }
+  
+  .hero .content h1 {
+    font-size: 4em;
+    color: #6d6767;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    line-height: 1.2;
+  }
+  
+  .hero .content h1 span {
+    color: var(--primary);
+  }
+  
+  .hero .content .cta {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.4rem;
+    color: #ffffff;
+    background-color: var(--primary);
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  }
+  
+  /* About Section */
+  .about,
+  .menu,
+  .contact {
+    padding: 7rem 7% 1.4rem;
+  }
+
+  /*pakaian adat */
+  .row1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 7px solid #d15a1a; /* Ubah warna border sesuai keinginan */
+    padding: 20px;
+  }
+  
+  .about .row1 .about-img {
+    flex: 1 1 45rem;
+    margin-left: 100px;
+  }
+  
+  .content {
+    flex: 2;
+  }
+  
+  .content h3 {
+    margin-right: 100px;
+    font-size: 40px;
+  }
+  
+  .content p {
+    line-height: 1.6;
+    margin-right: 10px;
+  }
+  
+  .about-img {
+    margin-right: -20px; /* Atur jarak antara gambar dan konten */
+  }
+  
+  .content {
+    flex: 10; /* Menggunakan sisa ruang yang tersedia */
+  }
+  
+  .about-img img {
+    max-width: 70%; /* Pastikan gambar tidak melebihi lebar parent */
+    height: auto; /* Biarkan tinggi gambar menyesuaikan agar proporsi tetap terjaga */
+  }
+
+  
+  .about .content h2{
+    color: #d27a3f;
+  }
+  
+  
+  /* tarian adat */
+
+  .menu {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+  }
+
+  .menu h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  .menu span {
+    color: #f39c12;
+  }
+
+  .row2 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .menu-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    overflow: hidden;
+    text-align: left;
+    flex: 1 1 calc(50% - 40px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .menu-card-title {
+    padding: 20px;
+    font-size: 16px;
+    color: #333;
+  }
+
+
+  .menu {
+    padding: 50px 20px;
+    background-color: #3f3e3c;
+    text-align: center;
+
+  }
+
+  .menu h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  .menu span {
+    color: #f39c12;
+  }
+
+  
+  .row2 {
+    display:inline-flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .menu-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    max-width: 300px;
+    overflow: hidden;
+    text-align: left;
+    flex: 1 1 calc(50% - 40px); /* Adjusting width of each card */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+
+  }
+  .menu-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .menu-card-title {
+    padding: 20px;
+    font-size: 16px;
+    color: #333;
+  }
+
+  .about h2,
+  .menu h2,
+  .contact h2 {
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 3rem;
+  }
+
+  
+  .menu .row2 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5px;
+    justify-content: center;
+  }
+  
+  
+  .menu .row2 .content {
+    flex: 1 1 35rem;
+    padding: 0 1rem;
+    display: flex;
+  }
+  
+  .menu .row2 .content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    margin-top: 2px;
+  }
+  
+  .menu .row2 .content p {
+    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
+    font-weight: 100;
+    line-height: 1.6rem;
+  }
+
+  .row2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; 
+    margin-bottom: 20px; 
+
+  }
+  
+  .menu h2{
+    color: #d27a3f;
+  }
+  
+  .menu p,
+  .contact p {
+    text-align: center;
+    max-width: 30rem;
+    margin: auto;
+    font-weight: 100;
+    line-height: 1.6;
+  }
+  
+  
+  
+  .menu .row2 .menu-card {
+    text-align: center;
+    padding-bottom: 4rem;
+  }
+  
+  .menu-card {
+    float: left; /* Mengatur floating ke kiri */
+    margin-right: 700px; 
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+  
+  .menu .row .menu-card .menu-card-title {
+    margin: 5rem auto 0.5rem;
+  }
+
+  /* Footer */
+  footer {
+    background-color: var(--primary);
+    text-align: center;
+    padding: 1rem 0 3rem;
+    margin-top: 3rem;
+  }
+  
+  footer .socials {
+    padding: 1rem 0;
+  }
+  
+  footer .socials a {
+    color: #000000;
+    margin: 1rem;
+  }
+  
+  footer .socials a:hover,
+  footer .links a:hover {
+    color: var(--bg);
+  }
+  
+  footer .links {
+    margin-bottom: 1.4rem;
+  }
+  
+  footer .links a {
+    color: #fff;
+    padding: 0.7rem 1rem;
+  }
+  
+  footer .credit {
+    font-size: 0.8rem;
+  }
+  
+  footer .credit a {
+    color: var(--bg);
+    font-weight: 700;
+  }
+  
+  /* Media Queris */
+  
+  /* Laptop */
+  @media (max-width: 1366px) {
+    html {
+      font-size: 75%;
+    }
+  }
+  
+  /* Tablet */
+  @media (max-width: 768px) {
+    html {
+      font-size: 62.5%;
+    }
+  
+  
+    .navbar .navbar-nav.active {
+      right: 0;
+    }
+  
+    .navbar .navbar-nav a {
+      color: var(--bg);
+      display: block;
+      margin: 1.5rem;
+      padding: 0.5rem;
+      font-size: 2rem;
+    }
+  
+    .navbar .navbar-nav a::after {
+      transform-origin: 0 0;
+    }
+  
+    .navbar .navbar-nav a:hover::after {
+      transform: scaleX(0.2);
+    }
+  
+    .about .row {
+      flex-wrap: wrap;
+    }
+  
+    .about .row .about-img img {
+      height: 24rem;
+      object-fit: cover;
+      object-position: center;
+    }
+  
+    .about .row .content {
+      padding: 0;
+    }
+  
+    .about .row .content h3 {
+      margin-top: 1rem;
+      font-size: 2rem;
+    }
+  
+    .about .row .content p {
+      font-size: 1.6rem;
+    }
+  
+    .menu p {
+      font-size: 1.2rem;
+    }
+  
+    .contact .row {
+      flex-wrap: wrap;
+    }
+  
+    .contact .row .map {
+      height: 30rem;
+    }
+  
+    .contact form {
+      padding-top: 0;
+    }
+  }
+  
+  /* Mobile Phone */
+  @media (max-width: 450px) {
+    html {
+      font-size: 55%;
+    }
+  }
+  
+.halamanm-masukan{
+    max-width: 600px;
+    margin-top: 100px ;
+    background-color: #fff;
+    padding: 500px;
+    border-radius: 100px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.1);
+}
+
+.halaman-masukan h1 {
+    text-align: center;
+    color: #d68a19;
+}
+
+.halaman-masukan form {
+    margin-top: 20px;
+}
+
+.halaman-masukan label {
+  margin-top: 20px;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #e1a026;
+}
+
+.halaman-masukan input[type="text"],
+.halaman-masukan textarea {
+    width: calc(50% - 55px);
+    display: flex;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 3px solid #ffffff;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.halaman-masukan textarea {
+    height: 100px;
+}
+
+.halaman-masukan input[type="submit"] {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+
+
+
+
+  
+  

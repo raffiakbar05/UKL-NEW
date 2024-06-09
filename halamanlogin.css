@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;  
+    background-color: rgba(255, 255, 255, 0.69);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    text-align: center;
+    color: #333;
+}
+
+.form {
+    margin-top: 20px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.forgot {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.forgot a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.forgot a:hover {
+    text-decoration: underline;
+}
