@@ -1,0 +1,107 @@
+:root {
+    --primary: #d27a3f;
+    --bg: #2e2d2c;
+    --text-color: #333;
+    --light-bg: #f5f5f5;
+    --card-bg: #fff;
+    --border-color: #ddd;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --hover-bg: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 100px auto 0 auto;
+    background-color: var(--card-bg);
+    padding: 20px;
+    box-shadow: 0 0 10px var(--shadow-color);
+    border-radius: 10px;
+}
+
+h2 {
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.alatmusik-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.alatmusik-detail img {
+    width: 100%;
+    max-width: 200px; /* Ubah ukuran maksimal gambar menjadi lebih kecil */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px var(--shadow-color);
+    margin-bottom: 20px;
+}
+
+.alatmusik-detail h3 {
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.alatmusik-detail p {
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    font-size: 1rem;
+    margin: 10px 0 5px;
+}
+
+input[type="number"],
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 300px;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #c76e39;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .alatmusik-detail img {
+        max-width: 150px; /* Ubah ukuran maksimal gambar untuk layar kecil */
+    }
+}

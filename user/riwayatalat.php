@@ -48,6 +48,7 @@ mysqli_close($mysqli);
         <a href="riwayat.php">Riwayat Sewa Pakaian</a>
         <a href="riwayatalat.php">Riwayat Sewa Alat</a>
         <a href="profil.php">Profil</a>
+        <a href="web saya.php">Home</a>
     </div>
 </nav>
 

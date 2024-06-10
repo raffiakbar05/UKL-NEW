@@ -65,7 +65,7 @@ mysqli_close($mysqli);
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sewa Alat Musik</title>
-  <link rel="stylesheet" href="sewabaru1.css">
+  <link rel="stylesheet" href="sewabaru.css">
   <script>
     function calculateTotal() {
         var harga = <?php echo $alatmusikData['harga']; ?>; // Ambil harga dari PHP
@@ -87,6 +87,7 @@ mysqli_close($mysqli);
       <!-- Form transaksi -->
       <form action="" method="post">
         <input type="hidden" name="id_user" value="<?php echo $userData['id_user']; ?>">
+        <input type="text" name="username" value="<?php echo $userData['username']; ?>" readonly>
         <input type="hidden" name="id_alat" value="<?php echo $alatmusikData['id_alat']; ?>">
         
         <label for="jumlah">Jumlah:</label>
